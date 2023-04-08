@@ -3198,6 +3198,8 @@ if(type=='impute'){
      .split[k] =   "[\\|\\/]"
    }else if (.format[k] == "GL"){
      .split[k] =  ","
+   }else if (.format[k] == "DS"){
+     .split[k] =  ","
    }else if(.format[k] =="IMP"){
      .split[k] =  ","
    }else if(.format[k] =="AD"){
@@ -3219,6 +3221,8 @@ if(type=='impute'){
       .process =.sum1
    }else if (.format[k] == "GL"){
       .process = .pow
+   }else if (.format[k] == "DS"){
+      .process = .unchanged
    }else if(.format[k] =="IMP"){
       .process = .splitImputed
    }else if(.format[k] =="AD"){
