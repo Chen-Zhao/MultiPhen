@@ -15,4 +15,9 @@ install.packages("RColorBrewer")
 install.packages("gplots")
 install.packages(path_to_file, repos = NULL, type="source")
 }
+
+
+devtools::install_github("Chen-Zhao/MultiPhen")
+
+
 ```
