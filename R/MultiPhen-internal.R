@@ -3212,6 +3212,7 @@ if(type=='impute'){
 }
 
 .sum1<-function(vec) sum(as.numeric(vec))
+.avg1<-function(vec) mean(as.numeric(vec))
 
 .getVCFProcess<-function(.format){
  # .process = rep(NA, length(format))
@@ -3222,7 +3223,7 @@ if(type=='impute'){
    }else if (.format[k] == "GL"){
       .process = .pow
    }else if (.format[k] == "DS"){
-      .process = .unchanged
+      .process = .avg1
    }else if(.format[k] =="IMP"){
       .process = .splitImputed
    }else if(.format[k] =="AD"){
