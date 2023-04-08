@@ -3240,7 +3240,7 @@ if(type=='impute'){
    dn = vector("list",length(.formats))
    for(k in 1:length(.formats)){
      .format = .formats[k]
-    if(length(which(c("GL","IMP")==.format))>0){
+    if(length(which(c("GL","IMP","DS")==.format))>0){
    ### NOTE, ASSUMES 3 GENOTYPES HERE
      dn[[k]] = list(sampleids,snpids,c(0,1,2))
    }else if("distr"==.format){
